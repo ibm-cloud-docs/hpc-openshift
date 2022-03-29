@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-03-29"
 
 keywords: 
 
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     with open(json_files, "r") as file:
         config_data = json.load(file)
 
-    api_key = config_data["template_data"][0]["variablestore"][1]["value"]
+    api_key = config_data["template_data"][0]["variablestore"][0]["value"]
 
     schematic_obj = HPCCEnvironmentValues(api_key)
 
