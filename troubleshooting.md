@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-03-29"
 
 keywords: 
 
@@ -139,4 +139,20 @@ After reconfiguring the volume profile, capacity, or IOPS, your workspace needs 
 You need to destroy your existing resources and try applying the change again. Your data on the storage node will be deleted if you destroy your existing resources.
 {: tsResolve}
 
+## Why do I get a node status of "Critical" after I attempt to create a cluster?
+{: #troubleshoot-topic-8}
+{: troubleshoot}
+{: support}
 
+You enter valid parameters and attempt to create a cluster. When you navigate to the [{{site.data.keyword.redhat_openshift_full}} URL](https://cloud.ibm.com/kubernetes/clusters?platformType=openshift){: external}, you see the following status:
+
+* Node status: Critical
+* Add-on status: Warning
+* Master status: Error
+{: tsSymptoms}
+
+There might be multiple reasons for the status not being "Normal" for the cluster and its components, especially if you create a large cluster (for example, a cluster with greater than 50 worker nodes).
+{: tsCauses}
+
+For more information on resolving this issue, see the {{site.data.keyword.openshiftlong_notm}} troubleshooting information on [Debugging clusters](/docs/openshift?topic=openshift-debug_clusters).
+{: tsResolve}
