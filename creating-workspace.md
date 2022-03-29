@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-03-29"
 
 keywords: 
 
@@ -189,24 +189,10 @@ schematics_service = SchematicsV1(authenticator = authenticator)
 schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')
 
 template_source_data_request_model = {}
-template_source_data_request_model['env_values'] = [
-{
-"name": "TF_CLI_ARGS_plan",
-"value": "-parallelism=250",
-},
-{
-"name": "TF_CLI_ARGS_apply",
-"value": "-parallelism=250"
-}
-]
+template_source_data_request_model['env_values'] = [{'Environment': 'openshift-hpcc'}]
 template_source_data_request_model['folder'] = ''
-template_source_data_request_model['type'] = 'terraform_v0.14.11'
-template_source_data_request_model['variablestore'] = [
-{
-"name": "ssh_key_name",
-"value": "oc-bcc-key",
-},
-]
+template_source_data_request_model['type'] = 'terraform_v1.0'
+template_source_data_request_model['variablestore'] = []
 
 template_repo_request_model = {}
 template_repo_request_model['url'] = 'https://github.com/IBM-Cloud/hpc-cluster-openshift'
@@ -218,10 +204,10 @@ description="HPC Cluster schematic workspace using API",
 name="Sample Schematic API workspace",
 template_data=[template_source_data_request_model],
 template_repo=template_repo_request_model,
-type=['terraform_v0.14.11'],
+type=['terraform_v1.0'],
 location="us-south",
 resource_group="Default",
-tags=[""]
+tags=[""],
 ).get_result()
 
 print(json.dumps(workspace_response, indent = 2))
