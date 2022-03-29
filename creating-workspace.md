@@ -34,7 +34,7 @@ With {{site.data.keyword.bplong}} workspaces, you can manage the Terraform-based
 {: ui}
 
 1. Go the [{{site.data.keyword.bpshort}}, {{site.data.keyword.cloud_notm}}'s deployment manager](https://cloud.ibm.com/schematics/overview){: external}.
-2. In the navigation menu, select **Workspaces**, and the select **Create workspace**.
+2. In the navigation menu, select **Workspaces**, and then select **Create workspace**.
 3. In the _Specify template_ section:
     * Provide your GitHub, GitLab, or Bitbucket repository URL where your Terraform files reside. The {{site.data.keyword.redhat_openshift_notm}} repository is provided by {{site.data.keyword.cloud_notm}} in this [public GitHub repository](https://github.com/IBM-Cloud/hpc-cluster-openshift){: external}.
     * If you are using a private GitHub repository, provide your personal GitHub access token.
