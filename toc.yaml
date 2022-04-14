@@ -16,7 +16,7 @@ toc:
   - navgroup: 
       id: tutorial
       topics: 
-      - hpc-cluster-tutorial.md
+      - setting-up-cluster-tutorial.md
   - navgroup: 
       id: howto
       topics:
