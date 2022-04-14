@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-04-14"
 
 keywords: 
 
@@ -25,7 +25,7 @@ subcollection: hpc-openshift
 {: #update-variables}
 
 1. To update variables by using the {{site.data.keyword.bplong}} Python APIs, create two Python files, and provide a name of your choice for those files, for example, `schematics_variables_update.py` and `schematics_env_class.py`.
-2. Copy and paste the `schematics_variables_update.py` and `schematics_env_class.py` Python example code requests to the respective Python files.
+2. Copy and paste the [`schematics_variables_update.py`](/docs/hpc-openshift?topic=hpc-openshift-update-variables&interface=ui#example-request-update-variables) and [`schematics_env_class.py`](/docs/hpc-openshift?topic=hpc-openshift-update-variables&interface=ui#example-request-update-variables-file) Python example code requests to the respective Python files.
 3. Copy and paste the [`config.json` template file](/docs/hpc-openshift?topic=hpc-openshift-update-variables&interface=api#template-file) to a JSON file, for example `config.json`.
 4. Change the following parameters as part of the request:
   * Provide the `workspace ID w_id` generated in both the following functions: `schematic_obj.get_workspace(w_id="<w_id>)` and `schematic_obj.update_variables(w_id="<wi_id>")`.
